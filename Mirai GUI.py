@@ -9,12 +9,7 @@ def main():
     pencere = tk.Tk()
     pencere.iconbitmap('favicon.ico')
     pencere.wm_title("Mirai 1.0 (未来)")
-    pencere.minsize(height=250)
     pencere.resizable(False, False)
-    x = (pencere.winfo_screenwidth() - pencere.winfo_reqwidth()) / 2
-    y = (pencere.winfo_screenheight() - pencere.winfo_reqheight()) / 2
-    pencere.geometry("+%d+%d" % (x, y))
-    pencere.grid()
 
     global yedekVerisi
     yedekVerisi="None"
@@ -38,7 +33,7 @@ def main():
         if len(deger) > 15: yeniimei.set(deger[:15])
 
     def hakkinda():
-        tk.messagebox.showinfo("About", "Memin's IMEI Repair And Install ( Mirai  未来 ) Version 1.0 For Devices with Qualcomm Snapdragon processors.")
+        tk.messagebox.showinfo("About", "Memin's IMEI Repair And Install ( Mirai  未来 ) Version 1.0 GUI. For Devices with Qualcomm Snapdragon processors.")
         tk.messagebox.showinfo("About", "Coded In TURKEY | Coded by Muhammet Emin TURGUT | Coded with Pure Python 3")
 
     def imei_okuyucu(yedekVerisi):
@@ -113,7 +108,22 @@ def main():
     #Alt Pencere
     ttk.Button(pencere, text="Replace", command=lambda: imei_okuyucu(yedekVerisi), width=10).grid(row=3, column=0, pady=5, padx=8,ipadx=31)
     ttk.Button(pencere, text="About", command=hakkinda, width=10).grid(row=3, column=3, pady=5,ipadx=31)
-    tk.messagebox.showwarning("FOR EDUCATIONAL PURPOSES ONLY!", "DISCLAIMER: This program is for EDUCATIONAL PURPOSES ONLY. Don't use them for illegal activities. You are responsable for your actions!")
+    #Pencere Ortalayıcı
+    pencere.attributes('-alpha', 0.0)
+    pencere.update_idletasks()
+    width = pencere.winfo_width()
+    frm_width = pencere.winfo_rootx() - pencere.winfo_x()
+    win_width = width + 2 * frm_width
+    height = pencere.winfo_height()
+    titlebar_height = pencere.winfo_rooty() - pencere.winfo_y()
+    win_height = height + titlebar_height + frm_width
+    x = pencere.winfo_screenwidth() // 2 - win_width // 2
+    y = pencere.winfo_screenheight() // 2 - win_height // 2
+    pencere.geometry('{}x{}+{}+{}'.format(width, height, x, y))
+    pencere.deiconify()
+    pencere.attributes('-alpha', 1.0)
+    ###############################
+    tk.messagebox.showwarning("DISCLAIMER", "This program is for EDUCATIONAL PURPOSES ONLY. Don't use them for illegal activities. You are responsable for your actions!")
     tk.mainloop()
 
 main()
