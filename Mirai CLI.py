@@ -5,11 +5,18 @@ def main():
 
 
 def menu_goruntule():
-    print("________________________________________________")
-    print("Memin's IMEI Repair And Install (MIRAI 未来)")
-    print("Version 1.0 // Coded In TURKEY")
+    print("""
+       _             _ 
+      (_)           (_)
+ ____  _  ____ _____ _ 
+|    \| |/ ___|____ | |
+| | | | | |   / ___ | |
+|_|_|_|_|_|   \_____|_|                       
+    """)
+    print("Memin's IMEI Repair And Install")
+    print("Version 1.0 CLI // Coded In TURKEY")
     print("Coded by Muhammet Emin TURGUT")
-    print("________________________________________________")
+    print("DISCLAIMER: This program is for EDUCATIONAL PURPOSES ONLY. Don't use them for illegal activities. You are responsable for your actions!  \n")
 
 def dosya_binconvert():
     try:
@@ -20,7 +27,7 @@ def dosya_binconvert():
         print("File Loaded Successfully")
     except:
         print("File Not Found")
-        kritik_cikis()
+        dosya_binconvert()
     return veriler
 
 def imei_okuyucu(binary_dosya):
@@ -81,10 +88,10 @@ def kaydet(yeni_binary):
         dosya.write(yeni_binary)
         print("File Saved")
     except:
+        print("File Save Error!")
         kritik_cikis()
 
 def kritik_cikis():
     print("Failed!")
-    exit()
 
 main()
