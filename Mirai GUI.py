@@ -15,7 +15,7 @@ def main():
     yedekVerisi="None"
     def binarydosya():
         global yedekVerisi
-        konum = askopenfilename(filetype=(("Qualcomm Backup File", "*.xqcn;*.qcn"),) )
+        konum = askopenfilename(filetypes=(("Qualcomm Backup File", "*.xqcn;*.qcn"),) )
         if konum is "":
             return
         else:
