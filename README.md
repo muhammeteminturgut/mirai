@@ -19,5 +19,5 @@ Bu program eğitim amacıyla yazılmıştır. Herhangi bir illegal kullanımdan 
 
 Lisans
 ----
-![N|Solid](https://www.gnu.org/graphics/gplv3-127x51.png)
+![N|Solid](https://github.com/muhammeteminturgut/mirai/blob/master/screenshot.png?raw=true)
 
