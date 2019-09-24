@@ -1,6 +1,6 @@
 # Mirai (未来) | An IMEI Repair Tool For Devices with Snapdragon Processor
 
-![N|Solid](http://i67.tinypic.com/sy8t5e.png)
+![N|Solid](https://github.com/muhammeteminturgut/mirai/blob/master/screenshot.png?raw=true)
 
 # Hakkında
 Mirai Qualcomm Snapdragon işlemcili telefonların IMEI adreslerini tamir etmeye yardımcı olan bir yazılımdır.
@@ -19,5 +19,5 @@ Bu program eğitim amacıyla yazılmıştır. Herhangi bir illegal kullanımdan 
 
 Lisans
 ----
-![N|Solid](https://github.com/muhammeteminturgut/mirai/blob/master/screenshot.png?raw=true)
+![N|Solid](https://www.gnu.org/graphics/gplv3-127x51.png)
 
